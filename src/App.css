@@ -142,6 +142,12 @@ form {
   justify-content: space-between;
   align-items: center;
 }
+input[type="submit"] {
+  background-color: #f4ce15;
+  border: 1px solid #f4ce15;
+  padding: 10px;
+  cursor: pointer;
+}
 @media (max-width: 700px) {
   header section, footer section {
     display: grid;
