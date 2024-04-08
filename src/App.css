@@ -60,7 +60,10 @@ nav ul li {
   display: inline-block;
   padding: 1em;
 }
-
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
 header {
   padding-top: 150px;
   background-color: #495e57;
@@ -110,7 +113,7 @@ footer section {
 
   justify-items: center;
   width:80%;
-    margin-left: 10%;
+  margin-left: 10%;
   gap: 20px;
   }
 
@@ -125,10 +128,20 @@ footer img {
 
 form {
   display: grid;
-  max-width: 200px;
+  max-width: 60%;
   gap: 20px;
 }
-
+.container.book {
+  margin: 0 auto;
+  max-width: 50%;
+  padding-bottom: 6rem;
+}
+.container.book div {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media (max-width: 700px) {
   header section, footer section {
     display: grid;

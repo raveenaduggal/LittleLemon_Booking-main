@@ -1,15 +1,15 @@
 import React from "react";
-import littlelemon_logo from "../images/littlelemon_logo.png"
-
-const Nav = () => {
+import littlelemon_logo from "../images/littlelemon_logo.png";
+import { Link } from "react-router-dom";
+const Nav = () => {   
     return(
         <nav>
-            <img src={littlelemon_logo} alt="Little Lemon Logo" ></img>
+            <Link to="/"><img src={littlelemon_logo} alt="Little Lemon Logo" ></img></Link>
             <ul>
-                <li><a>Home</a></li>
+                <li><Link to="/">Home</Link></li>
                 <li><a>About</a></li>
                 <li><a>Menu</a></li>
-                <li><a>Reservations</a></li>
+                <li><Link to="/Booking">Reservations</Link></li>
                 <li><a>Order Online</a></li>
                 <li><a>Login</a></li>
 
@@ -19,3 +19,7 @@ const Nav = () => {
 }
 
 export default Nav;
+const  styles ={
+    textDecoration: 'none',
+    color:"black",  
+}

@@ -22,7 +22,8 @@ const BookingForm = (props) => {
 
   return (
     <header>
-      <section>
+      <div className="container book">
+        <h1>Book a Table</h1>
         <form onSubmit={handleSumbit}>
           <fieldset>
             <div>
@@ -53,7 +54,7 @@ const BookingForm = (props) => {
             </div>
           </fieldset>
         </form>
-      </section>
+     </div>
     </header>
   );
 };
