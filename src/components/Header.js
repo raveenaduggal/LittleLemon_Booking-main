@@ -1,24 +1,36 @@
 import React from "react";
-import food1 from "../images/food1.avif"
 import { Link } from "react-router-dom";
 
-
-const Header = () => {
-    return(
-        <header>
-            <section>
-            <div>
-            <h2>Little Lemon</h2>
-            <h3>Chicago</h3>
-            <p>We are a family owned Mediterraneran restaurant, focused on traditional recipes servred with a modern twist.</p>
-            <Link to="/Booking"><button aria-label="On Click">Reserve Table</button></Link>
-            </div>
-            <div>
-                <img src={food1} />
-            </div>
-            </section>
-        </header>
-    )
+function Header({ children, openMenu }) {
+  return (
+    <header>
+      {children}
+      <div>
+        {openMenu && (
+          <ul className="san">
+            <li>
+              <Link to={"/"}>Home</Link>
+            </li>
+            <li>
+              <Link to={"/"}>About</Link>
+            </li>
+            <li>
+              <Link to={"/"}>Menu</Link>
+            </li>
+            <li>
+              <Link to={"/booking"}>Reservation</Link>
+            </li>
+            <li>
+              <Link to={"/"}>Order Online</Link>
+            </li>
+            <li>
+              <Link to={"/"}>Login</Link>
+            </li>
+          </ul>
+        )}
+      </div>
+    </header>
+  );
 }
 
 export default Header;

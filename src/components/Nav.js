@@ -1,25 +1,37 @@
-import React from "react";
-import littlelemon_logo from "../images/littlelemon_logo.png";
+import logo from "../icons_assets/Logo.svg";
+// import { MdOutlineMenu } from "react-icons/md";
 import { Link } from "react-router-dom";
-const Nav = () => {   
-    return(
-        <nav>
-            <Link to="/"><img src={littlelemon_logo} alt="Little Lemon Logo" ></img></Link>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><a>About</a></li>
-                <li><a>Menu</a></li>
-                <li><Link to="/Booking">Reservations</Link></li>
-                <li><a>Order Online</a></li>
-                <li><a>Login</a></li>
 
-            </ul>
-        </nav>
-    )
+function Nav({ setOpenMenu, openMenu }) {
+  return (
+    <nav>
+      <img src={logo} alt="logo" />
+      <ul className="nav">
+        <li>
+          <Link to={"/"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/"}>About</Link>
+        </li>
+        <li>
+          <Link to={"/"}>Menu</Link>
+        </li>
+        <li>
+          <Link to={"/booking"}>Reservation</Link>
+        </li>
+        <li>
+          <Link to={"/"}>Order Online</Link>
+        </li>
+        <li>
+          <Link to={"/"}>Login</Link>
+        </li>
+      </ul>
+      {/* <MdOutlineMenu
+        className="sandwich"
+        onClick={() => setOpenMenu(!openMenu)}
+      /> */}
+    </nav>
+  );
 }
 
 export default Nav;
-const  styles ={
-    textDecoration: 'none',
-    color:"black",  
-}
