@@ -129,6 +129,7 @@ button:hover {
   flex-direction: column;
   gap: 35px;
   border-radius: var(--board-radius);
+  box-shadow: 3px 4px 5px #ddd;
 }
 .card img {
   width: 100%;
@@ -228,15 +229,16 @@ h6 {
 }
 .succes {
   position: absolute;
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-color: #495e5782;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #d5d5d5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 .succes p {
   text-align: center;
